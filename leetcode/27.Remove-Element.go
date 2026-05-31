@@ -104,6 +104,7 @@ func removeElement(nums []int, val int) int {
 }
 
 // 找不是val的值 不是就一個一個往前移
+// 時間O(n) 空間O(1)
 func removeElement2(nums []int, val int) int {
 	currentIndex := 0
 	valCount := 0
