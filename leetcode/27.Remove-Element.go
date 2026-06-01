@@ -90,7 +90,7 @@ import "sort"
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
 
-// 把跟val一億的直換成不會出現得較大數字 再排序移到後面
+// 把跟val的直換成不會出現得較大數字 再排序移到後面
 func removeElement(nums []int, val int) int {
 	valCount := 0
 	for i, item := range nums {
