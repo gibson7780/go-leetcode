@@ -104,6 +104,7 @@ func Rotate3(nums []int, k int) {
 }
 
 // 時間O(n) 空間(1)
+// 3次反轉
 func Rotate4(nums []int, k int) {
 	reverse(nums, 0, len(nums)-1)
 	reverse(nums, 0, k-1)
