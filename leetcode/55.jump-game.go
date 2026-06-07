@@ -42,6 +42,11 @@ package leetcode
 
 // [1, 0, 1, 0, 1]
 
+// 時間O(n) 空間O(1)
+// 取得最遠可到達的index: 當下的值+當下的index
+// 就算數據很長 前面的最遠可能會被高index+低value取代 所以不會永遠鎖死在前面的高距離的值上
+// 中途遇到0要可以超越該index+1的最遠距離
+// 最後終點只需要跟最遠距離一樣或更高就可
 func CanJump(nums []int) bool {
 	lastIndex := len(nums) - 1 // 最終位置
 	isArrive := false
@@ -62,4 +67,20 @@ func CanJump(nums []int) bool {
 
 	}
 	return isArrive
+}
+
+// 不用管是0還是終點 只要小於當下index就是到不了
+// 貪心法
+// 即使是0 也不用當下決定 下一輪會被淘汰
+func CanJump2(nums []int) bool {
+	maxDistance := 0
+	for i, n := range nums {
+		if i < maxDistance {
+			return false
+		}
+		if maxDistance < n+i {
+			maxDistance = n + i
+		}
+	}
+	return true
 }
