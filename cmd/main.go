@@ -11,6 +11,10 @@ func main() {
 	// leetcode.Merge3(nums1, 3, nums2, 3)
 
 	// 189
-	nums := []int{1, 2, 3, 4, 5, 6, 7}
-	leetcode.Rotate4(nums, 3)
+	// nums := []int{1, 2, 3, 4, 5, 6, 7}
+	// leetcode.Rotate4(nums, 3)
+
+	// 55
+	nums := []int{3, 2, 1, 0, 4}
+	leetcode.CanJump(nums)
 }
