@@ -51,12 +51,12 @@ package leetcode
 // [2,2,2,1,4,3,0,0,1]
 // 空間O(n)時間(1)
 // 貪婪法
-// 預先紀錄每一跳的次數，i < len(nums)不會執行終點那一次所以避免多跳一次
+// 預先紀錄每一輪會跳的次數，也就是一開始還沒到終點所以一定會有1跳先記錄起來，而不數確定會跳才紀錄，i < len(nums)-1 不會執行終點那一次所以避免多跳一次
 func jump(nums []int) int {
 	jumpMaxDistance := 0
 	jumpTimes := 0
 	currentJumpMaxIndex := 0
-	for i := 0; i < len(nums); i++ {
+	for i := 0; i < len(nums)-1; i++ {
 		if jumpMaxDistance < nums[i]+i {
 			jumpMaxDistance = nums[i] + i
 		}
