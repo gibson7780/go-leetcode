@@ -45,7 +45,7 @@ package leetcode
 // 输入 保证 数组 answer[i] 在  32 位 整数范围内
 
 // 进阶：你可以在 O(1) 的额外空间复杂度内完成这个题目吗？（ 出于对空间复杂度分析的目的，输出数组 不被视为 额外空间。）
-
+// 算左到右 再算右到左
 func productExceptSelf(nums []int) []int {
 
 	result := make([]int, len(nums))
